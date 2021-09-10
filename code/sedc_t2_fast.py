@@ -59,10 +59,13 @@ def sedc_t2_fast(image, classifier, segments, target_class, mode, max_time=600):
     p_new_list = results[:, target_class]
 
     if target_class in c_new_list:
-        R = np.where(c_new_list == target_class)
-        I = cf_candidates[R]
-        C = c_new_list[R]
-        P = p_new_list[R]
+        R = [[x] for x in np.where(c_new_list == target_class)[0]]
+
+        target_class_idxs = np.array(R).reshape(1, -1)[0]
+
+        I = cf_candidates[target_class_idxs]
+        C = c_new_list[target_class_idxs]
+        P = p_new_list[target_class_idxs]
 
     sets_to_expand_on = [[x] for x in np.where(c_new_list != target_class)[0]]
     P_sets_to_expand_on = p_new_list[np.where(c_new_list != target_class)[0]]-results[np.where(c_new_list != target_class)[0], c]
