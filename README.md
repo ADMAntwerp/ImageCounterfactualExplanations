@@ -1,6 +1,14 @@
 # Image Counterfactual Generator
 
 ## How to use it
+
+This package was tested using Python 3.7
+
+### Install Requirements
+```shell
+pip install -r requirements.txt
+```
+
 ### Using MobileNetV2 Model
 To generate a targeted counterfactual for the MobileNetV2 model, you can use the script `gen_t2_mnv2`, which has the mandatory fields described below:
 ```shell
