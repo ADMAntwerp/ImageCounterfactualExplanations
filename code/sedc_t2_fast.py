@@ -59,7 +59,7 @@ def sedc_t2_fast(image, classifier, segments, target_class, mode, max_time=600):
     p_new_list = results[:, target_class]
 
     if target_class in c_new_list:
-        R = np.where(c_new_list == target_class)[0]
+        R = np.where(c_new_list == target_class)
         I = cf_candidates[R]
         C = c_new_list[R]
         P = p_new_list[R]
