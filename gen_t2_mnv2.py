@@ -20,7 +20,7 @@ parser.add_argument("--output", help="Output Folder", type=str, required=True)
 parser.add_argument("--cclass", help="Counterfactual class, labels names are available "
                               "in https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt",
                     type=str, required=True)
-parser.add_argument("--jobs", help="Number of jobs", type=str, default=1)
+parser.add_argument("--jobs", help="Number of jobs", type=int, default=1)
 parser.add_argument("--mode", help="Mode", type=str, default="blur")
 parser.add_argument("--timeout", help="Max generation time in seconds", type=int, default=60)
 
