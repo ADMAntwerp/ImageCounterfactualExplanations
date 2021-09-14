@@ -1,5 +1,3 @@
-import sys
-sys.path.append('./code')
 import os
 import multiprocessing
 import argparse
@@ -11,7 +9,7 @@ import tensorflow as tf
 import tensorflow_hub as hub
 from skimage.segmentation import quickshift
 
-from sedc_t2_fast import sedc_t2_fast
+from isedc.sedc_t2_fast import sedc_t2_fast
 
 
 parser = argparse.ArgumentParser("CF Image Generator For MobileNetV2 Model")
